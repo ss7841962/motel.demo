@@ -2,37 +2,57 @@
 <html>
 <head>
 	<title>高科大第一大旅館</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 </head>
 <style type="text/css">
 form{
-	line-height:2em;
+	line-height:1em;
 }
-form>input{
-	padding:100px 100px;border-top-width: 100px solid #888888;border-radius: 20px;
+.content{
+    width:1000px;margin-right: auto;margin-left: auto;
 }
+.head{
+	background-color: #00BFFF;color:black;font-weight:bold; padding: 1px;                     
+}
+ center.head{
+	background-color: #B0E0E6;color:black;font-weight:10px; padding: 1px;
+}
+center.box{
+	background-color: #ffffff;color:black;font-weight:10px; padding: 1px;
+}
+
+	
+@media screen and (max-width: 500px){
+    .content{width: 100%;text-align: center;font-size: 1px}
+	}                                          */手機設定
+ 
 </style>
 
 
 
-
+                            
  <body bgcolor="#f0f8ff">
+ <div class="content">
  	<br>
-    <div> 
-         <center><strong><font face="標楷體"style="font-size:70px">高科大第一大旅館</font></strong></center><br><hr color="black" size="5" width="1800">
-    </div><br>
-    <center><font face="標楷體" style="font-size:50px">飯店客房服務系統<font></center>
+    <center><div class="head" style="height: 50px;width:380px"> 
+         <strong><font face="標楷體"style="font-size:40px">高科大第一大旅館</font></strong></center><br><br>
+         <//hr color="black" size="5" width="1000">
+    </div>
 
-  <br>
-    <center>
-    <form onsubnit="alert('表單送出');" style="font-size:30px">
-    	<enter>
-    	帳號:<input placeholder="輸入房號" pattern="[0-9]{4,4}" type="text" required style="height:25px;width:180px;text-indent:5px;
-    	font-size:20px;">
-    	<br>
 
-    	密碼:<input placeholder="輸入手機" pattern="[0-9]{10,10}"type="password" required style="height:25px;width:180px;text-indent:5px;
+ 
+    <center><center class="head" style="width:300px"><div><font face="標楷體" style="font-size:30px">飯店客房服務系統<font></div></center></center>
+
+
+    <center><center  class="box" style="width:300px">
+    <form onsubnit="alert('表單送出');" style="font-size:20px">
+    
+    	<br>帳號:<input placeholder="輸入房號" pattern="[0-9]{4,4}" type="text" required style="height:20px;width:150px;text-indent:5px;font-size:20px;">
+    	<br><br>
+
+    	密碼:<input placeholder="輸入手機" pattern="[0-9]{10,10}"type="password" required style="height:20px;width:150px;text-indent:5px;
     	font-size:20px;">
-        <br>
+        <br><br>
         
         <input type="submit" value="登入" style="height:30px;width:60px;
     	font-size:20px;">
@@ -42,10 +62,10 @@ form>input{
     </form>
 
 
-    <center>
+    <br><center>
     	<a href="https://ss7841962.github.io/motel.demo/back/back.html"><input type="submit" value="後台登入" style="height:30px;width:100px;font-size:20px "></a>
     </center>
-
+</div>
 
     
 
