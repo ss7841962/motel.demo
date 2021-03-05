@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>註冊頁面</title>
-  </head>
-  <body bgcolor="#f0f8ff">
-    <form  style="font-size:20px">
-    
-        <br>帳號:<input placeholder="輸入房號" pattern="[0-9]{4,4}" type="text" required style="height:20px;width:150px;text-indent:5px;font-size:20px;"
-        name="username"></input>
-        <br><br>
+<?php
+$a=['username'];
+$b=['password'];
 
-        密碼:<input placeholder="輸入手機" pattern="[0-9]{10,10}"type="password" required style="height:20px;width:150px;text-indent:5px;font-size:20px;"
-        name="password"></input>
-        <br><br>
+echo $_post['$a'];
+echo "password";
+echo $b;
 
-        <input type='submit' value="登入" style="height:30px;width:60px;font-size:20px;"></input>
-        <br><br>
-       
+?>
 
-      </center>
-    </form>
-  
-  </body>
-</html>
+
+
+
+
+
