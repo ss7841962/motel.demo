@@ -4,11 +4,17 @@
 	<title>高科大第一大旅館-後台登入</title>
 </head>
 <script type="text/javascript">
-if(username=='0000'){
-    <!–
-    window.location.replace("https://ss7841962.github.io/motel.demo/backin.html");
-–>
+function login(){
+    if(username=='0000'){
+    window.location.href='https://ss7841962.github.io/motel.demo/back.html'
+    }    
+    else(){
+    window.location.href='https://ss7841962.github.io/motel.demo/back.html'
+    }
+
+
 }
+
 </script>
 
 <style type="text/css">
@@ -23,7 +29,7 @@ form>input{
 
 
  <body bgcolor="#f0f8ff">
-    <form  style="font-size:20px">
+    <form  style="font-size:20px" >
     
         <br>帳號:<input placeholder="輸入房號" pattern="[0-9]{4,4}" type="text" required style="height:20px;width:150px;text-indent:5px;font-size:20px;"
         name="username"></input>
@@ -33,7 +39,7 @@ form>input{
         name="password"></input>
         <br><br>
 
-        <input type='submit' value="登入" style="height:30px;width:60px;font-size:20px;"></input>
+        <input type='submit' value="登入" onclick="login()" style="height:30px;width:60px;font-size:20px;"></input>
         <br><br>
        
 
