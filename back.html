@@ -14,7 +14,7 @@ function user() {
   var truepassword = '0000000000';
 
   var xhr = new XMLHttpRequest();
-  xhr.open('post', 'https://ss7841962.github.io/motel.demo/sign.txt', true);
+  xhr.open('post', 'https://ss7841962.github.io/motel.demo/backin.html', true);
   xhr.setRequestHeader('Content-type', 'application/json');
   var data = JSON.stringify(trueuser); //因為格式是 JSON，所以要轉字串
   xhr.send(data);
@@ -34,7 +34,7 @@ function logIncheck() {
   account.password = passwordStr; //填入的密碼
 
   var xhr = new XMLHttpRequest();
-  xhr.open('post', 'https://ss7841962.github.io/motel.demo/sign.txt', true);
+  xhr.open('post', 'https://ss7841962.github.io/motel.demo/backin.html', true);
   xhr.setRequestHeader('Content-type', 'application/json');
   var data = JSON.stringify(account); //因為格式是 JSON，所以要轉字串
   xhr.send(data);

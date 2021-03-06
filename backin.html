@@ -1,12 +1,148 @@
-<?php
-$a=['username'];
-$b=['password'];
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+var signUpBtn = document.querySelector('.signUp');
+var logInBtn = document.querySelector('.logIn');
+// var msg = document.getElementById('message');
 
-echo $_post['$a'];
-echo "password";
-echo $b;
 
-?>
+//註冊
+function signUpcheck() {
+
+  // model
+  var emailStr = document.querySelector('.email').value;
+  var passwordStr = document.querySelector('.password').value;
+  var account = {}; //輸入的資料，填入空物件
+  account.email = emailStr; //填入的 email
+  account.password = passwordStr; //填入的密碼
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('post', 'https://hexschool-tutorial.herokuapp.com/api/signup', true);
+  xhr.setRequestHeader('Content-type', 'application/json');
+  var data = JSON.stringify(account); //因為格式是 JSON，所以要轉字串
+  xhr.send(data);
+  xhr.onload = function () {
+    var callbackData = JSON.parse(xhr.responseText); //因為輸入資料目前是字串，要轉成物件才能使用
+    var str = callbackData.message;
+    if (str == "帳號註冊成功") {
+      alert('帳號註冊成功');
+    } else {
+      alert('帳號已被使用');
+    }
+  }
+}
+
+
+
+// event
+signUpBtn.addEventListener('click', signUpcheck, false);
+
+</script>
+<style type="text/css">
+* {
+  box-sizing: border-box;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 500px;
+}
+
+h2 {
+  text-align: center;
+  color: #25a6af;
+}
+
+.email,
+.password {
+  width: 500px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+label {
+  padding-right: 10px;
+}
+
+input {
+  margin-top: 10px;
+}
+
+input:focus {
+  outline: none;
+  /* 取消focus效果 */
+}
+
+#btn {
+  text-align: center;
+}
+
+#btn input {
+  width: 45%;
+  margin: 2%;
+  margin-top: 10px;
+  border: none;
+  height: auto;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 100px;
+}
+
+.signUp,
+.logIn {
+  cursor: pointer;
+}
+
+.signUp {
+  background-color: #06a81c;
+  color: #fff;
+}
+
+.signUp:hover {
+  background-color: #047714;
+  color: #fff;
+}
+
+.logIn {
+  background-color: #ffce49;
+  color: #816516;
+}
+
+.logIn:hover {
+  background-color: #ffc31f;
+  color: #816516;
+}
+
+/* .true {
+  color: #06a81c;
+}
+
+.false {
+  color: red;
+} */
+
+</style>
+
+
+
+
+ <div class="wrap">
+    <h2>請選擇註冊或是登入</h2>
+    <form action="form.html">
+      <label for="email">請輸入信箱</label>
+      <input type="email" name="email" class="email" placeholder="請輸入信箱"><br>
+      <label for="password">請輸入密碼</label>
+      <input type="password" name="password" class="password" placeholder="請輸入密碼"> <br>
+      <div id="btn">
+        <input type="button" value="註冊" class="signUp">
+      </div>
+  </div>
+  </form>
+</html>
+<!-- <p id="message"></p> -->
+
 
 
 
